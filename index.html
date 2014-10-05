@@ -1,7 +1,62 @@
 <html>
 <head>
 <title>Square Ball Loaders</title>
-<style rel="stylesheet" type="text/css" href="sb.css>
+<!-- <style rel="stylesheet" type="text/css" href="sb.css> -->
+<style>
+body {
+  background: #eee;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 40%;
+}
+
+.ball {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background: #363;
+  border-radius: 0;
+  margin: 3px;
+  animation: blob .7s infinite linear alternate;
+}
+
+.ball:nth-child(1){
+}
+.ball:nth-child(2){
+  animation-delay:0.2s;
+}
+.ball:nth-child(3){
+  animation-delay:0.3s;
+}
+.ball:nth-child(4){
+  animation-delay:0.4s;
+}
+.ball:nth-child(5){
+  animation-delay:0.5s;
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 0;
+    transform: rotateZ(0);
+  }
+  50% {
+    border-radius: 51%;
+    transform: rotateZ(0);
+  }
+  51% {
+    transform: rotateZ(45deg);
+  }  
+  100% {
+    border-radius: 0;
+    transform: rotateZ(45deg);
+    background: gold;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="loader">
